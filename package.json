@@ -1,0 +1,22 @@
+{
+  "name": "flashcard-generator",
+  "version": "1.0.0",
+  "description": "flashcard generator homework",
+  "main": "CLI.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/molliechacon/flashcard-generator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/molliechacon/flashcard-generator/issues"
+  },
+  "homepage": "https://github.com/molliechacon/flashcard-generator#readme",
+  "dependencies": {
+    "inquirer": "^3.3.0"
+  }
+}
