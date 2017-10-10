@@ -4,6 +4,7 @@ var clozeCard = require("./clozecard.js");
 // require node module packages
 var inquirer = require("inquirer");
 
+// initial prompt - basic or cloze card?
 inquirer.prompt([
     {
         type: "list",
@@ -26,7 +27,9 @@ inquirer.prompt([
 
 
 
-// would love to list the functions below as prototypes of the constructors contained within basiccard.js and clozecard.js but can't get the promises/asynchronous problem fixed... At least they kind of work when placed here...
+// would love to list the functions below as prototypes of the constructors 
+// contained within basiccard.js and clozecard.js but can't get the 
+// promises/asynchronous problem fixed... At least they kind of work when placed here...
 
 function addBasic() {
     inquirer.prompt([
@@ -60,11 +63,15 @@ function addBasic() {
         // THIS CONSOLE.LOG WORKS!
         console.log(answers);
 
-        // BUT BASICCARD IS NOT DEFINED BELOW!!!!!! WHY???????? BASICCARD.JS IS REQUIRED ABOVE!!!!!!!!! THE CONSOLE.LOG W/IN THE BASICCARD.JS FILE EXECUTES SO I BELIEVE IT IS REQUIRED PROPERLY??
+        // BUT BASICCARD IS NOT DEFINED BELOW!!!!!! WHY???????? BASICCARD.JS 
+        // IS REQUIRED ABOVE!!!!!!!!! THE CONSOLE.LOG W/IN THE BASICCARD.JS FILE 
+        // EXECUTES SO I BELIEVE IT IS REQUIRED PROPERLY??
         
         // PROMISES?!?! WTF? HELP.
 
-        // here is the error message from the CL: (node:11788) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 1): ReferenceError: BasicCard is not defined
+        // here is the error message from the CL: (node:11788) 
+        // UnhandledPromiseRejectionWarning: Unhandled promise rejection 
+        // (rejection id: 1): ReferenceError: BasicCard is not defined
         var newBasic = new BasicCard(answers.front, answers.back);
 
         console.log(newBasic.front);
@@ -113,6 +120,8 @@ function addCloze() {
             }
         }
     ]).then(function(answers) {
+        // how to throw an error if the cloze is not contained within the text?
+
 
         // this console.log works
         console.log(answers);
